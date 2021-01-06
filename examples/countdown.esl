@@ -1,0 +1,11 @@
+set a 10
+set d 6
+sub c zero d
+set d 1
+  sub a a d
+  pop a
+  gate c a zero
+pop c
+pop a
+pop b
+pop d

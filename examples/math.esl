@@ -1,0 +1,5 @@
+set a 10
+mul b a a
+set d 100
+cmp c b d
+xit c
