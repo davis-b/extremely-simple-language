@@ -18,7 +18,7 @@ pub const Operations = [_]Operation{
     .{ .name = "xit", .len = 1, .args = &[_]ArgType{.reg} }, // exit program, returning value in register arg1
 
     .{ .name = "jmp", .len = 1, .args = &[_]ArgType{.reg} }, // move instruction pointer by value in register arg1
-    .{ .name = "cjmp", .len = 3, .args = &[_]ArgType{ .reg, .reg, .reg } }, // conditional jump. jmp if reg2 register is equal to reg3
+    .{ .name = "cjmp", .len = 3, .args = &[_]ArgType{ .reg, .reg, .reg } }, // conditional jump. jmp if reg2 is equal to reg3
     .{ .name = "gate", .len = 3, .args = &[_]ArgType{ .reg, .reg, .reg } }, // conditional jump. jmp if reg2 is not equal to reg3
     .{ .name = "cmp", .len = 3, .args = &[_]ArgType{ .reg, .reg, .reg } }, // compare reg2 with reg3, put result in reg1
 
