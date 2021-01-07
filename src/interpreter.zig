@@ -72,13 +72,13 @@ fn run(program: []const u8) void {
                 continue;
             },
             .add => {
-                registers.ofl = @addWithOverflow(RSIZE, regs[arg2], regs[arg3], &regs[arg1]);
+                registers.ofl += @intCast(i2, @boolToInt(@addWithOverflow(RSIZE, regs[arg2], regs[arg3], &regs[arg1])));
             },
             .sub => {
-                registers.ofl = @subWithOverflow(RSIZE, regs[arg2], regs[arg3], &regs[arg1]);
+                registers.ofl += @intCast(i2, @boolToInt(@subWithOverflow(RSIZE, regs[arg2], regs[arg3], &regs[arg1])));
             },
             .mul => {
-                registers.ofl = @mulWithOverflow(RSIZE, regs[arg2], regs[arg3], &regs[arg1]);
+                registers.ofl += @intCast(i2, @boolToInt(@mulWithOverflow(RSIZE, regs[arg2], regs[arg3], &regs[arg1])));
             },
             // else => {
             //     warn("instruction: {}\n", .{operation.name});

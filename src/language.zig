@@ -52,9 +52,10 @@ pub const Registers = struct {
     d: RSIZE = 0,
 
     zero: RSIZE = 0, // Keep this at zero, helpful register to have in order to reduce code size
+    ofl: RSIZE = 0, // Overflow flag. Increments by one each time an overflow occurs
+
     // cannot use that hack here, as size is now varying
-    ofl: bool = false, // overflow flag
-    ip: usize = 0, // instruction pointer
+    ip: usize = 0, // Instruction pointer
 };
 
 pub const Register = enum {
